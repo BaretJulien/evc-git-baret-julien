@@ -1,0 +1,46 @@
+@import '../helpers/font';
+@import '../helpers/colors';
+@import '../helpers/responsive';
+
+.skills{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16vh;
+    box-sizing: border-box;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        padding: 4vw;
+    }
+
+    article{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+
+        img{
+            width: 50%;
+        }
+        h4{
+            font-weight: 500;
+            font-size: $title-skills;
+            margin: 4vh 0;
+        }
+        p{
+            text-align: center;
+        }
+    }
+
+    article:nth-child(2), article:nth-child(3){
+        @media (max-width: $mobile) {
+            margin-top: 16vh;
+        }
+    }
+}
